@@ -1,0 +1,383 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Text To Word</title></head><body><p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang="en"&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&nbsp; &lt;meta charset="utf-8"/&gt;</p>
+<p>&nbsp; &lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt;</p>
+<p>&nbsp; &lt;title&gt;Joyce Vinoliya J &mdash; Portfolio&lt;/title&gt;</p>
+<p>&nbsp; &lt;!-- Fonts (falls back gracefully if offline) --&gt;</p>
+<p>&nbsp; &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p>&nbsp; &lt;style&gt;</p>
+<p>&nbsp; &nbsp; :root{</p>
+<p>&nbsp; &nbsp; &nbsp; /* Brand palette (your picks) */</p>
+<p>&nbsp; &nbsp; &nbsp; --brown:#895129; /* primary chocolate */</p>
+<p>&nbsp; &nbsp; &nbsp; --brown-700:#6f3f1e;</p>
+<p>&nbsp; &nbsp; &nbsp; --sandal:#EBD4A6; /* light sandal */</p>
+<p>&nbsp; &nbsp; &nbsp; --bg:#F8EFD9; /* pale sandal */</p>
+<p>&nbsp; &nbsp; &nbsp; --ink:#22150f; /* deep coffee text */</p>
+<p>&nbsp; &nbsp; &nbsp; --muted:#6e574a;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; /* Glass + effects */</p>
+<p>&nbsp; &nbsp; &nbsp; --glass: rgba(255,255,255,.18);</p>
+<p>&nbsp; &nbsp; &nbsp; --glass-border: rgba(255,255,255,.45);</p>
+<p>&nbsp; &nbsp; &nbsp; --blur: 14px;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; --radius: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; --shadow-1: 0 16px 60px rgba(0,0,0,.18);</p>
+<p>&nbsp; &nbsp; &nbsp; --shadow-2: 0 20px 80px rgba(137,81,41,.25);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; *{box-sizing:border-box}</p>
+<p>&nbsp; &nbsp; html,body{height:100%}</p>
+<p>&nbsp; &nbsp; body{</p>
+<p>&nbsp; &nbsp; &nbsp; margin:0;</p>
+<p>&nbsp; &nbsp; &nbsp; color:var(--ink);</p>
+<p>&nbsp; &nbsp; &nbsp; background:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(1200px 700px at 120% -20%, rgba(235,212,166,.55), transparent 60%),</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(900px 600px at -15% 10%, rgba(137,81,41,.22), transparent 55%),</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; var(--bg);</p>
+<p>&nbsp; &nbsp; &nbsp; font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;</p>
+<p>&nbsp; &nbsp; &nbsp; -webkit-font-smoothing:antialiased;</p>
+<p>&nbsp; &nbsp; &nbsp; scroll-behavior:smooth;</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; a{color:inherit;text-decoration:none}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; .container{max-width:1120px;margin:0 auto;padding:0 20px}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* NAV */</p>
+<p>&nbsp; &nbsp; .nav{</p>
+<p>&nbsp; &nbsp; &nbsp; position:sticky; top:0; z-index:50;</p>
+<p>&nbsp; &nbsp; &nbsp; backdrop-filter: blur(var(--blur));</p>
+<p>&nbsp; &nbsp; &nbsp; background:linear-gradient(0deg, rgba(248,239,217,.6), rgba(248,239,217,.4));</p>
+<p>&nbsp; &nbsp; &nbsp; border-bottom:1px solid rgba(0,0,0,.06);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}</p>
+<p>&nbsp; &nbsp; .brand{display:flex;gap:12px;align-items:center}</p>
+<p>&nbsp; &nbsp; .logo{</p>
+<p>&nbsp; &nbsp; &nbsp; width:44px;height:44px;border-radius:14px;display:grid;place-items:center;</p>
+<p>&nbsp; &nbsp; &nbsp; color:#fff;font-weight:800;letter-spacing:.5px;</p>
+<p>&nbsp; &nbsp; &nbsp; background:linear-gradient(135deg, var(--brown-700), var(--brown));</p>
+<p>&nbsp; &nbsp; &nbsp; box-shadow: var(--shadow-2);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .nav-links a{</p>
+<p>&nbsp; &nbsp; &nbsp; display:inline-block; font-weight:700; margin-left:18px; position:relative;</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .nav-links a::after{</p>
+<p>&nbsp; &nbsp; &nbsp; content:""; position:absolute; left:0; bottom:-6px; height:3px; width:0%;</p>
+<p>&nbsp; &nbsp; &nbsp; background:linear-gradient(90deg, var(--sandal), var(--brown));</p>
+<p>&nbsp; &nbsp; &nbsp; border-radius:999px; transition:width .25s;</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .nav-links a:hover::after{width:100%}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* HERO (Glassmorphism card) */</p>
+<p>&nbsp; &nbsp; header{padding:42px 0}</p>
+<p>&nbsp; &nbsp; .hero{</p>
+<p>&nbsp; &nbsp; &nbsp; display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center;</p>
+<p>&nbsp; &nbsp; &nbsp; padding:26px; border-radius:var(--radius);</p>
+<p>&nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, rgba(255,255,255,.55), rgba(255,255,255,.25));</p>
+<p>&nbsp; &nbsp; &nbsp; border:1px solid var(--glass-border);</p>
+<p>&nbsp; &nbsp; &nbsp; backdrop-filter: blur(var(--blur));</p>
+<p>&nbsp; &nbsp; &nbsp; box-shadow: var(--shadow-1);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .title{</p>
+<p>&nbsp; &nbsp; &nbsp; font-family:"Playfair Display", Poppins, serif;</p>
+<p>&nbsp; &nbsp; &nbsp; font-size:44px; line-height:1.1; margin:0 0 8px; color:var(--brown-700);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .subtitle{font-weight:700; color:#3a271e; margin-bottom:6px}</p>
+<p>&nbsp; &nbsp; .rotator{font-weight:600; color:var(--muted); min-height:24px}</p>
+<p>&nbsp; &nbsp; .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}</p>
+<p>&nbsp; &nbsp; .btn{</p>
+<p>&nbsp; &nbsp; &nbsp; padding:12px 16px; border-radius:14px; font-weight:800; cursor:pointer; border:none;</p>
+<p>&nbsp; &nbsp; &nbsp; color:#2b1b12; background:linear-gradient(180deg, #fff, #fff6e9);</p>
+<p>&nbsp; &nbsp; &nbsp; border:1px solid rgba(0,0,0,.08);</p>
+<p>&nbsp; &nbsp; &nbsp; box-shadow: 0 10px 30px rgba(0,0,0,.10);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .btn.alt{</p>
+<p>&nbsp; &nbsp; &nbsp; color:#fff; background:linear-gradient(135deg, var(--brown-700), var(--brown));</p>
+<p>&nbsp; &nbsp; &nbsp; border:1px solid rgba(255,255,255,.25);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Profile placeholder (no photo) */</p>
+<p>&nbsp; &nbsp; .pfp-wrap{display:flex;justify-content:center}</p>
+<p>&nbsp; &nbsp; .pfp{</p>
+<p>&nbsp; &nbsp; &nbsp; width:230px;height:260px;border-radius:26%/22%;</p>
+<p>&nbsp; &nbsp; &nbsp; display:grid;place-items:center; text-align:center;</p>
+<p>&nbsp; &nbsp; &nbsp; background:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(120px 80px at 30% 25%, rgba(255,255,255,.35), transparent 60%),</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(135deg, var(--brown), var(--brown-700));</p>
+<p>&nbsp; &nbsp; &nbsp; color:#fff; border:5px solid var(--sandal);</p>
+<p>&nbsp; &nbsp; &nbsp; box-shadow: 0 24px 70px rgba(0,0,0,.35);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .pfp .tag{</p>
+<p>&nbsp; &nbsp; &nbsp; font-weight:900; letter-spacing:.5px; font-size:18px; line-height:1.2;</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Section standards */</p>
+<p>&nbsp; &nbsp; section{padding:48px 0}</p>
+<p>&nbsp; &nbsp; .section-title{</p>
+<p>&nbsp; &nbsp; &nbsp; font-family:"Playfair Display", Poppins, serif; font-size:30px; margin:0 0 16px;</p>
+<p>&nbsp; &nbsp; &nbsp; color:var(--brown-700);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .card{</p>
+<p>&nbsp; &nbsp; &nbsp; background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.58));</p>
+<p>&nbsp; &nbsp; &nbsp; border:1px solid var(--glass-border); border-radius:var(--radius);</p>
+<p>&nbsp; &nbsp; &nbsp; backdrop-filter: blur(var(--blur)); padding:22px; box-shadow: var(--shadow-1);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* About + Edu */</p>
+<p>&nbsp; &nbsp; .about-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:20px}</p>
+<p>&nbsp; &nbsp; .about p{margin:0; color:#4b392f; line-height:1.7}</p>
+<p>&nbsp; &nbsp; .edu .pill{</p>
+<p>&nbsp; &nbsp; &nbsp; display:inline-block; background: var(--sandal); color: var(--ink);</p>
+<p>&nbsp; &nbsp; &nbsp; padding:10px 12px; border-radius:12px; font-weight:800; margin:0 8px 8px 0;</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Skills &ndash; premium circular rings */</p>
+<p>&nbsp; &nbsp; .skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px}</p>
+<p>&nbsp; &nbsp; .skill{display:flex;flex-direction:column;align-items:center;gap:12px;padding:22px}</p>
+<p>&nbsp; &nbsp; .ring{</p>
+<p>&nbsp; &nbsp; &nbsp; --size:200px; --track:#efe6d5; --fill: var(--brown);</p>
+<p>&nbsp; &nbsp; &nbsp; width:var(--size); height:var(--size); border-radius:50%;</p>
+<p>&nbsp; &nbsp; &nbsp; background:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(circle at 50% 50%, rgba(255,255,255,.95) 0 68px, transparent 68px 100%),</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; conic-gradient(var(--fill) calc(var(--value,0)*1%), var(--track) 0);</p>
+<p>&nbsp; &nbsp; &nbsp; position:relative; box-shadow: 0 14px 40px rgba(0,0,0,.12);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .ring::before{ /* inner glass disc */</p>
+<p>&nbsp; &nbsp; &nbsp; content:""; position:absolute; inset:18px; border-radius:50%;</p>
+<p>&nbsp; &nbsp; &nbsp; background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,.35));</p>
+<p>&nbsp; &nbsp; &nbsp; border:1px solid rgba(255,255,255,.55); backdrop-filter: blur(10px);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .ring .val,</p>
+<p>&nbsp; &nbsp; .ring .lbl{</p>
+<p>&nbsp; &nbsp; &nbsp; position:absolute; left:50%; transform:translateX(-50%);</p>
+<p>&nbsp; &nbsp; &nbsp; font-weight:900; text-align:center;</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .ring .val{ top:75px; font-size:22px; color:var(--brown-700) }</p>
+<p>&nbsp; &nbsp; .ring .lbl{ top:110px; font-weight:800; color:var(--muted) }</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Timeline project (story style) */</p>
+<p>&nbsp; &nbsp; .timeline{position:relative;margin-left:8px;padding-left:24px}</p>
+<p>&nbsp; &nbsp; .timeline::before{</p>
+<p>&nbsp; &nbsp; &nbsp; content:""; position:absolute; left:8px; top:0; bottom:0; width:4px;</p>
+<p>&nbsp; &nbsp; &nbsp; background: linear-gradient(var(--brown), var(--sandal));</p>
+<p>&nbsp; &nbsp; &nbsp; border-radius:999px; opacity:.8;</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .t-item{position:relative;margin:0 0 18px 0}</p>
+<p>&nbsp; &nbsp; .t-item::marker{content:""}</p>
+<p>&nbsp; &nbsp; .dot{</p>
+<p>&nbsp; &nbsp; &nbsp; position:absolute; left:-2px; top:4px; width:16px; height:16px; border-radius:50%;</p>
+<p>&nbsp; &nbsp; &nbsp; background:linear-gradient(135deg,var(--brown),var(--sandal)); border:2px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,.18);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .t-card{</p>
+<p>&nbsp; &nbsp; &nbsp; margin-left:22px; padding:14px 16px; border-radius:14px;</p>
+<p>&nbsp; &nbsp; &nbsp; background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.6));</p>
+<p>&nbsp; &nbsp; &nbsp; border:1px solid var(--glass-border);</p>
+<p>&nbsp; &nbsp; &nbsp; box-shadow: 0 10px 28px rgba(0,0,0,.08);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; .badge{display:inline-block;font-size:12px;font-weight:900;border-radius:999px;padding:6px 10px;background:var(--sandal);color:var(--ink)}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Contact */</p>
+<p>&nbsp; &nbsp; .contact-grid{display:grid;grid-template-columns:1fr;gap:12px}</p>
+<p>&nbsp; &nbsp; .link{</p>
+<p>&nbsp; &nbsp; &nbsp; display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;</p>
+<p>&nbsp; &nbsp; &nbsp; background:linear-gradient(180deg,#fff,#fff7eb);border:1px solid rgba(0,0,0,.08);font-weight:800</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Footer */</p>
+<p>&nbsp; &nbsp; footer{background:linear-gradient(135deg, var(--brown-700), var(--brown)); color:#fff}</p>
+<p>&nbsp; &nbsp; footer .inner{max-width:1120px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Reveal animations */</p>
+<p>&nbsp; &nbsp; .reveal{opacity:0; transform:translateY(18px); transition: all .6s ease}</p>
+<p>&nbsp; &nbsp; .reveal.show{opacity:1; transform:none}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; /* Responsive */</p>
+<p>&nbsp; &nbsp; @media (max-width:920px){</p>
+<p>&nbsp; &nbsp; &nbsp; .hero{grid-template-columns:1fr; text-align:center}</p>
+<p>&nbsp; &nbsp; &nbsp; .about-grid{grid-template-columns:1fr}</p>
+<p>&nbsp; &nbsp; &nbsp; .ring{--size:170px}</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; &lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&nbsp; &lt;!-- NAV --&gt;</p>
+<p>&nbsp; &lt;nav class="nav"&gt;</p>
+<p>&nbsp; &nbsp; &lt;div class="container nav-inner"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div class="brand"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="logo"&gt;JV&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;strong&gt;Joyce Vinoliya J&lt;/strong&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div class="nav-links"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="#about"&gt;About&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="#skills"&gt;Skills&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="#projects"&gt;Project&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &lt;/nav&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &lt;!-- HERO --&gt;</p>
+<p>&nbsp; &lt;header&gt;</p>
+<p>&nbsp; &nbsp; &lt;div class="container"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div class="hero reveal"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h1 class="title"&gt;An Elegant Portfolio Showcase&lt;/h1&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="subtitle" id="tagline"&gt;B.Sc Computer Science Student | Future Software Engineer&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rotator" id="rotator"&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="hero-actions"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class="btn alt" href="#projects"&gt;View Project&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class="btn" href="#contact"&gt;Contact Me&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="pfp-wrap"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- No photo; rich placeholder --&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="pfp"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="tag"&gt;JOYCE&lt;br&gt;VINOLIYA&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &lt;/header&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &lt;main&gt;</p>
+<p>&nbsp; &nbsp; &lt;!-- ABOUT --&gt;</p>
+<p>&nbsp; &nbsp; &lt;section id="about"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div class="container"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="about-grid"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card reveal"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class="section-title"&gt;About Me&lt;/h2&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I&rsquo;m passionate about web designing with a strong interest in UI/UX. Creativity drives my work, and I enjoy</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transforming ideas into modern, user-friendly web experiences. My focus is on clarity, elegance, and</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; accessibility&mdash;crafting interfaces that look refined and feel effortless to use.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card reveal edu"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class="section-title"&gt;Education&lt;/h2&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class="pill"&gt;Jawaharlal Nehru College for Women&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class="pill"&gt;B.Sc Computer Science&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &lt;/section&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &lt;!-- SKILLS --&gt;</p>
+<p>&nbsp; &nbsp; &lt;section id="skills"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div class="container"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class="section-title"&gt;Skills&lt;/h2&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card reveal"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="skills-grid"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="skill"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="ring" style="--fill:#f1652b" data-target="90"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="val"&gt;0%&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="lbl"&gt;HTML&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="skill"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="ring" style="--fill:#264de4" data-target="85"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="val"&gt;0%&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="lbl"&gt;CSS&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Add more skills easily by copying a block --&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &lt;/section&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &lt;!-- PROJECT (timeline story) --&gt;</p>
+<p>&nbsp; &nbsp; &lt;section id="projects"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div class="container"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class="section-title"&gt;Project&lt;/h2&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card reveal"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="badge"&gt;Web&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="timeline" style="margin-top:12px"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="t-item"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="dot"&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="t-card"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;strong&gt;Personal Portfolio Website&lt;/strong&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p style="margin:.4rem 0 0;color:var(--muted)"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A responsive, glassy, and elegant portfolio to present my profile, skills, and contact details.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Built with HTML, CSS, and light JavaScript. Focused on clean UI, accessibility, and beautiful motion.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- If you add more projects, paste new .t-item blocks --&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &lt;/section&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &lt;!-- CONTACT --&gt;</p>
+<p>&nbsp; &nbsp; &lt;section id="contact"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div class="container"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class="section-title"&gt;Contact&lt;/h2&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="card reveal"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="contact-grid"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class="link" href="mailto:jjoycevino26@gmail.com"&gt;📧 jjoycevino26@gmail.com&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Optional future links:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class="link" href="#" target="_blank" rel="noopener"&gt;🐙 GitHub&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a class="link" href="#" target="_blank" rel="noopener"&gt;🔗 LinkedIn&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &lt;/section&gt;</p>
+<p>&nbsp; &lt;/main&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &lt;footer&gt;</p>
+<p>&nbsp; &nbsp; &lt;div class="inner"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div&gt;&copy; 2025 Joyce Vinoliya J&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &lt;div&gt;Jawaharlal Nehru College for Women &bull; B.Sc Computer Science&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &lt;/footer&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &lt;script&gt;</p>
+<p>&nbsp; &nbsp; // Rotating taglines (your set)</p>
+<p>&nbsp; &nbsp; const taglines = [</p>
+<p>&nbsp; &nbsp; &nbsp; "B.Sc Computer Science Student | Future Software Engineer",</p>
+<p>&nbsp; &nbsp; &nbsp; "Aspiring Web &amp; App Developer",</p>
+<p>&nbsp; &nbsp; &nbsp; "Computer Science Undergraduate | Tech Enthusiast",</p>
+<p>&nbsp; &nbsp; &nbsp; "Student Programmer | Problem Solver"</p>
+<p>&nbsp; &nbsp; ];</p>
+<p>&nbsp; &nbsp; (function rotate(){</p>
+<p>&nbsp; &nbsp; &nbsp; const t2 = document.getElementById('rotator');</p>
+<p>&nbsp; &nbsp; &nbsp; let i = 1; t2.textContent = taglines[i];</p>
+<p>&nbsp; &nbsp; &nbsp; setInterval(()=&gt;{ i = (i+1)%taglines.length; t2.textContent = taglines[i]; }, 2600);</p>
+<p>&nbsp; &nbsp; })();</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; // Reveal on scroll</p>
+<p>&nbsp; &nbsp; const io = new IntersectionObserver((entries)=&gt;{</p>
+<p>&nbsp; &nbsp; &nbsp; entries.forEach(e=&gt;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }</p>
+<p>&nbsp; &nbsp; &nbsp; });</p>
+<p>&nbsp; &nbsp; }, {threshold:.25});</p>
+<p>&nbsp; &nbsp; document.querySelectorAll('.reveal').forEach(el=&gt;io.observe(el));</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; // Animate skill rings when Skills visible</p>
+<p>&nbsp; &nbsp; const skillsIO = new IntersectionObserver((entries,obs)=&gt;{</p>
+<p>&nbsp; &nbsp; &nbsp; entries.forEach(en=&gt;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if(!en.isIntersecting) return;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; document.querySelectorAll('.ring').forEach(r=&gt;{</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const target = +r.getAttribute('data-target')||0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let cur = 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const val = r.querySelector('.val');</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; function step(){</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur += Math.max(1, Math.round(target/40));</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(cur&gt;target) cur = target;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r.style.setProperty('--value', cur);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r.style.background =</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `radial-gradient(circle at 50% 50%, rgba(255,255,255,.95) 0 68px, transparent 68px 100%),`+</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `conic-gradient(${getComputedStyle(r).getPropertyValue('--fill').trim()} calc(${cur} * 1%), #efe6d5 0)`;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; val.textContent = cur + '%';</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(cur&lt;target) requestAnimationFrame(step);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; requestAnimationFrame(step);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; });</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; obs.disconnect();</p>
+<p>&nbsp; &nbsp; &nbsp; });</p>
+<p>&nbsp; &nbsp; }, {threshold:.35});</p>
+<p>&nbsp; &nbsp; skillsIO.observe(document.querySelector('#skills'));</p>
+<p>&nbsp; &lt;/script&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p></body></html>
